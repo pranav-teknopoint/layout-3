@@ -8,7 +8,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css"
     />
-    <link rel="stylesheet" href="css/hamburger.css">
+    <link rel="stylesheet" href="css/hamburger.css" />
     <link rel="stylesheet" href="css/checkbox.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
@@ -17,32 +17,37 @@
       <div class="container">
         <div class="header__nav">
           <div class="hamburgermenu">
-            <input type="checkbox" name="hamburger" id="hamburger" class="hamburger">
+            <input
+              type="checkbox"
+              name="hamburger"
+              id="hamburger"
+              class="hamburger"
+            />
             <label for="hamburger" class="collapse-hamburger">
-            <div class="hamburgericon">
-            <div class="lineone"></div>
-            <div class="linetwo"></div>
-            <div class="linethree"></div>
-          </div>
-          </label>
-          <div class="hamburgerlist">
-            <ul>
-              <li>
-                <a href="">Vehicles</a>
-              </li>
-              <li>
-                <a href="">FAQs</a>
-              </li>
-              <li>
-                <a href="">Contact Us</a>
-              </li>
-              <li>
-                <div class="header__nav--country">
-              <img src="assets/UAE__flag.svg" alt="Flag" />
+              <div class="hamburgericon">
+                <div class="lineone"></div>
+                <div class="linetwo"></div>
+                <div class="linethree"></div>
+              </div>
+            </label>
+            <div class="hamburgerlist">
+              <ul>
+                <li>
+                  <a href="">Vehicles</a>
+                </li>
+                <li>
+                  <a href="">FAQs</a>
+                </li>
+                <li>
+                  <a href="">Contact Us</a>
+                </li>
+                <li>
+                  <div class="header__nav--country">
+                    <img src="assets/UAE__flag.svg" alt="Flag" />
+                  </div>
+                </li>
+              </ul>
             </div>
-              </li>
-            </ul>
-          </div>
           </div>
           <div class="main__logo">
             <img src="assets/logo.png" alt="Logo" />
@@ -64,16 +69,18 @@
               </li>
               <li>
                 <div class="header__nav--country">
-              <img src="assets/UAE__flag.svg" alt="Flag" />
-            </div>
+                  <img src="assets/UAE__flag.svg" alt="Flag" />
+                </div>
+              </li>
+              <li>
+                <div class="header__nav--signin">
+                  <a href="#"
+                    ><img src="assets/user__icon.svg" alt="icon" />
+                    <p>Sign In</p>
+                  </a>
+                </div>
               </li>
             </ul>
-            <div class="header__nav--signin">
-              <a href="#"
-                ><img src="assets/user__icon.svg" alt="icon" />
-                <p>Sign In</p>
-              </a>
-            </div>
           </div>
         </div>
       </div>
@@ -95,13 +102,6 @@
               </select>
             </div>
           </div>
-          <!-- <div class="header__search--sort">
-            <select id="Sort">
-              <option value="Bytime">By Time</option>
-              <option value="Byname">By Name</option>
-              <option value="Bymodel">By model</option>
-            </select>
-          </div> -->
           <div class="header__search--arrange">
             <div class="grid-sort">
               <div></div>
@@ -158,7 +158,7 @@
                 value="comingsoon"
               />
               <span class="checkmark"></span>
-            </label>            
+            </label>
             <label class="checkbox__container" for="endedauctions"
               >Ended Auctions
               <input
@@ -171,10 +171,77 @@
               />
               <span class="checkmark"></span>
             </label>
-          </div>          
+          </div>
         </div>
       </div>
     </section>
+
+    <div class="filter__floating">
+    <div class="backdrop"></div>
+
+      <div class="filterslist">
+        <form action="#">
+          <select id="make">
+            <option value="Make">Make</option>
+            <option value="Toyota">Toyota</option>
+            <option value="Hyundai">Hyundai</option>
+            <option value="Audi">Audi</option>
+          </select>
+          <select id="model">
+            <option value="Model">Model</option>
+            <option value="SE">SE</option>
+            <option value="Camry">Camry</option>
+            <option value="R8">R8</option>
+          </select>
+          <select id="city">
+            <option value="City">City</option>
+            <option value="Mumbai">Mumbai</option>
+            <option value="Goa">Goa</option>
+            <option value="Delhi">Delhi</option>
+          </select>
+          <select id="From">
+            <option value="From">From</option>
+            <option value="2000">2000</option>
+            <option value="2001">2001</option>
+            <option value="2002">2002</option>
+          </select>
+          <select id="To">
+            <option value="To">To</option>
+            <option value="2022">2022</option>
+            <option value="2023">2023</option>
+            <option value="2024">2024</option>
+          </select>
+          <input
+            type="text"
+            name="auctionid"
+            id="auctionid"
+            placeholder="Auction ID"
+          />
+          <div class="slider">
+            <p>Current Bid</p>
+            <input
+              type="text"
+              class="js-range-slider"
+              name="my_range"
+              value=""
+            />
+          </div>
+          <div class="search__filter">
+            <img src="assets/filter__search.svg" alt="search" />
+            <a href="#">Search</a>
+          </div>
+          <div class="reset">
+            <a href="#">Reset</a>
+          </div>
+        </form>
+      </div>
+      <div class="filtericon">
+        <div class="floatingicon">
+          <img src="assets/filter__icon.svg" alt="filter" />
+        </div>
+      </div>
+    </div>
+
     <section id="content">
       <div class="container">
         <div class="flex__wrapper content">
@@ -236,95 +303,311 @@
               </form>
             </div>
           </div>
-          <div class="content__wrapper">            
-          <div class="main__content flex__wrapper">
-            <div class="columnone flex__wrapper flex__wrapper--column">
-              <div class="car__card">
-                <div class="car__time">
-                  <p>Thursday 12 Dec 2019 - 15:10</p>
-                </div>
-                <div class="car__image">
-                  <div class="auction__icon"></div>
+          <div class="content__wrapper">
+            <div class="main__content flex__wrapper">
+              <div class="columnone flex__wrapper flex__wrapper--column">
+                <div class="car__card">
+                  <div class="car__time">
+                    <p>Thursday 12 Dec 2019 - 15:10</p>
+                  </div>
+                  <div class="car__image">
+                    <div class="auction__icon"></div>
                     <label class="favourites" for="favourites-star1">
-                    <input type="checkbox" name="favourites-star" id="favourites-star1">
-                    <span class="favourite-icon"></span>
-                  </label>
-                </div>
-                <div class="car__name">
-                  <h2>Toyota Camry SE</h2>
-                  <span>2019</span>
-                </div>
-                <div class="car__views">
-                  <p><img src="assets/accident.svg" alt="accident" /> Accident</p>
-                  <p><img src="assets/view.svg" alt="view" />7,732 Views</p>
-                </div>
-                <div class="car__location">
-                  <img src="assets/location.svg" alt="location" />
-                  <div class="location">
-                    <p>Location</p>
-                    <h4>Riyadh Yard, Saudi Arabia</h4>
+                      <input
+                        type="checkbox"
+                        name="favourites-star"
+                        id="favourites-star1"
+                      />
+                      <span class="favourite-icon"></span>
+                    </label>
                   </div>
-                </div>
-                <div class="car__buysell">
-                  <div class="car__sold">
-                    <img src="assets/sold.svg" alt="sold" />
-                    <div class="sellbuy">
-                      <p>Sold for</p>
-                      <h4>23,911 <span>SAR</span></h4>
+                  <div class="car__name">
+                    <h2>Toyota Camry SE</h2>
+                    <span>2019</span>
+                  </div>
+                  <div class="car__views">
+                    <p>
+                      <img src="assets/accident.svg" alt="accident" /> Accident
+                    </p>
+                    <p><img src="assets/view.svg" alt="view" />7,732 Views</p>
+                  </div>
+                  <div class="car__location">
+                    <img src="assets/location.svg" alt="location" />
+                    <div class="location">
+                      <p>Location</p>
+                      <h4>Riyadh Yard, Saudi Arabia</h4>
                     </div>
                   </div>
-                  <div class="car__buy">
-                    <img src="assets/buy.svg" alt="buy" />
-                    <div class="sellbuy">
-                      <p>Buy now</p>
-                      <h4>23,911 <span>SAR</span></h4>
+                  <div class="car__buysell">
+                    <div class="car__sold">
+                      <img src="assets/sold.svg" alt="sold" />
+                      <div class="sellbuy">
+                        <p>Sold for</p>
+                        <h4>23,911 <span>SAR</span></h4>
+                      </div>
+                    </div>
+                    <div class="car__buy">
+                      <img src="assets/buy.svg" alt="buy" />
+                      <div class="sellbuy">
+                        <p>Buy now</p>
+                        <h4>23,911 <span>SAR</span></h4>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="viewbids">
+                    <div class="collapsible">
+                      <input
+                        type="checkbox"
+                        id="collapsibleone"
+                        class="toggle"
+                      />
+                      <label for="collapsibleone" class="collapse-toggle"
+                        >View 3 Bids</label
+                      >
+                      <div class="collapsible__content">
+                        <div class="collapsible__content--content">
+                          <div class="content--inner">
+                            <div class="calendar">
+                              <img src="assets/calendar.svg" alt="calendar" />
+                              <h4>1.</h4>
+                            </div>
+                            <div class="name">
+                              <p>10 Dec 2019 - 20:05</p>
+                              <h4>JOVANA MILIC</h4>
+                            </div>
+                            <div class="price">
+                              <p>10,500<span>SAR</span></p>
+                            </div>
+                          </div>
+                          <div class="content--inner">
+                            <div class="calendar">
+                              <img src="assets/calendar.svg" alt="calendar" />
+                              <h4>1.</h4>
+                            </div>
+                            <div class="name">
+                              <p>10 Dec 2019 - 20:05</p>
+                              <h4>JOVANA MILIC</h4>
+                            </div>
+                            <div class="price">
+                              <p>10,500<span>SAR</span></p>
+                            </div>
+                          </div>
+                          <div class="content--inner">
+                            <div class="calendar">
+                              <img src="assets/calendar.svg" alt="calendar" />
+                              <h4>1.</h4>
+                            </div>
+                            <div class="name">
+                              <p>10 Dec 2019 - 20:05</p>
+                              <h4>JOVANA MILIC</h4>
+                            </div>
+                            <div class="price">
+                              <p>10,500<span>SAR</span></p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div class="viewbids">
-                  <div class="collapsible">
-                    <input type="checkbox" id="collapsibleone" class="toggle" />
-                    <label for="collapsibleone" class="collapse-toggle"
-                      >View 3 Bids</label>
-                    <div class="collapsible__content">
-                      <div class="collapsible__content--content">
-                        <div class="content--inner">
-                          <div class="calendar">
-                            <img src="assets/calendar.svg" alt="calendar" />
-                            <h4>1.</h4>
+                <div class="car__card">
+                  <div class="car__time">
+                    <p>Thursday 12 Dec 2019 - 15:10</p>
+                  </div>
+                  <div class="car__image">
+                    <div class="auction__icon"></div>
+                    <label class="favourites" for="favourites-star2">
+                      <input
+                        type="checkbox"
+                        name="favourites-star"
+                        id="favourites-star2"
+                      />
+                      <span class="favourite-icon"></span>
+                    </label>
+                  </div>
+                  <div class="car__name">
+                    <h2>Toyota Camry SE</h2>
+                    <span>2019</span>
+                  </div>
+                  <div class="car__views">
+                    <p><img src="assets/accident.svg" alt="" /> Accident</p>
+                    <p><img src="assets/view.svg" alt="" />7,732 Views</p>
+                  </div>
+                  <div class="car__location">
+                    <img src="assets/location.svg" alt="" />
+                    <div class="location">
+                      <p>Location</p>
+                      <h4>Riyadh Yard, Saudi Arabia</h4>
+                    </div>
+                  </div>
+                  <div class="car__buysell">
+                    <div class="car__sold">
+                      <img src="assets/sold.svg" alt="" />
+                      <div class="sellbuy">
+                        <p>Sold for</p>
+                        <h4>23,911 <span>SAR</span></h4>
+                      </div>
+                    </div>
+                    <div class="car__buy">
+                      <img src="assets/buy.svg" alt="" />
+                      <div class="sellbuy">
+                        <p>Buy now</p>
+                        <h4>23,911 <span>SAR</span></h4>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="viewbids">
+                    <div class="collapsible">
+                      <input
+                        type="checkbox"
+                        id="collapsibletwo"
+                        class="toggle"
+                      />
+                      <label for="collapsibletwo" class="collapse-toggle"
+                        >View 3 Bids</label
+                      >
+                      <div class="collapsible__content">
+                        <div class="collapsible__content--content">
+                          <div class="content--inner">
+                            <div class="calendar">
+                              <img src="assets/calendar.svg" alt="calendar" />
+                              <h4>1.</h4>
+                            </div>
+                            <div class="name">
+                              <p>10 Dec 2019 - 20:05</p>
+                              <h4>JOVANA MILIC</h4>
+                            </div>
+                            <div class="price">
+                              <p>10,500<span>SAR</span></p>
+                            </div>
                           </div>
-                          <div class="name">
-                            <p>10 Dec 2019 - 20:05</p>
-                            <h4>JOVANA MILIC</h4>
+                          <div class="content--inner">
+                            <div class="calendar">
+                              <img src="assets/calendar.svg" alt="calendar" />
+                              <h4>1.</h4>
+                            </div>
+                            <div class="name">
+                              <p>10 Dec 2019 - 20:05</p>
+                              <h4>JOVANA MILIC</h4>
+                            </div>
+                            <div class="price">
+                              <p>10,500<span>SAR</span></p>
+                            </div>
                           </div>
-                          <div class="price">
-                            <p>10,500<span>SAR</span></p>
+                          <div class="content--inner">
+                            <div class="calendar">
+                              <img src="assets/calendar.svg" alt="calendar" />
+                              <h4>1.</h4>
+                            </div>
+                            <div class="name">
+                              <p>10 Dec 2019 - 20:05</p>
+                              <h4>JOVANA MILIC</h4>
+                            </div>
+                            <div class="price">
+                              <p>10,500<span>SAR</span></p>
+                            </div>
                           </div>
                         </div>
-                        <div class="content--inner">
-                          <div class="calendar">
-                            <img src="assets/calendar.svg" alt="calendar" />
-                            <h4>1.</h4>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="car__card">
+                  <div class="car__time">
+                    <p>Thursday 12 Dec 2019 - 15:10</p>
+                  </div>
+                  <div class="car__image">
+                    <div class="auction__icon"></div>
+                    <label class="favourites" for="favourites-star3">
+                      <input
+                        type="checkbox"
+                        name="favourites-star"
+                        id="favourites-star3"
+                      />
+                      <span class="favourite-icon"></span>
+                    </label>
+                  </div>
+                  <div class="car__name">
+                    <h2>Toyota Camry SE</h2>
+                    <span>2019</span>
+                  </div>
+                  <div class="car__views">
+                    <p><img src="assets/accident.svg" alt="" /> Accident</p>
+                    <p><img src="assets/view.svg" alt="" />7,732 Views</p>
+                  </div>
+                  <div class="car__location">
+                    <img src="assets/location.svg" alt="" />
+                    <div class="location">
+                      <p>Location</p>
+                      <h4>Riyadh Yard, Saudi Arabia</h4>
+                    </div>
+                  </div>
+                  <div class="car__buysell">
+                    <div class="car__sold">
+                      <img src="assets/sold.svg" alt="" />
+                      <div class="sellbuy">
+                        <p>Sold for</p>
+                        <h4>23,911 <span>SAR</span></h4>
+                      </div>
+                    </div>
+                    <div class="car__buy">
+                      <img src="assets/buy.svg" alt="" />
+                      <div class="sellbuy">
+                        <p>Buy now</p>
+                        <h4>23,911 <span>SAR</span></h4>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="viewbids">
+                    <div class="collapsible">
+                      <input
+                        type="checkbox"
+                        id="collapsiblethree"
+                        class="toggle"
+                      />
+                      <label for="collapsiblethree" class="collapse-toggle"
+                        >View 3 Bids</label
+                      >
+                      <div class="collapsible__content">
+                        <div class="collapsible__content--content">
+                          <div class="content--inner">
+                            <div class="calendar">
+                              <img src="assets/calendar.svg" alt="calendar" />
+                              <h4>1.</h4>
+                            </div>
+                            <div class="name">
+                              <p>10 Dec 2019 - 20:05</p>
+                              <h4>JOVANA MILIC</h4>
+                            </div>
+                            <div class="price">
+                              <p>10,500<span>SAR</span></p>
+                            </div>
                           </div>
-                          <div class="name">
-                            <p>10 Dec 2019 - 20:05</p>
-                            <h4>JOVANA MILIC</h4>
+                          <div class="content--inner">
+                            <div class="calendar">
+                              <img src="assets/calendar.svg" alt="calendar" />
+                              <h4>1.</h4>
+                            </div>
+                            <div class="name">
+                              <p>10 Dec 2019 - 20:05</p>
+                              <h4>JOVANA MILIC</h4>
+                            </div>
+                            <div class="price">
+                              <p>10,500<span>SAR</span></p>
+                            </div>
                           </div>
-                          <div class="price">
-                            <p>10,500<span>SAR</span></p>
-                          </div>
-                        </div>
-                        <div class="content--inner">
-                          <div class="calendar">
-                            <img src="assets/calendar.svg" alt="calendar" />
-                            <h4>1.</h4>
-                          </div>
-                          <div class="name">
-                            <p>10 Dec 2019 - 20:05</p>
-                            <h4>JOVANA MILIC</h4>
-                          </div>
-                          <div class="price">
-                            <p>10,500<span>SAR</span></p>
+                          <div class="content--inner">
+                            <div class="calendar">
+                              <img src="assets/calendar.svg" alt="calendar" />
+                              <h4>1.</h4>
+                            </div>
+                            <div class="name">
+                              <p>10 Dec 2019 - 20:05</p>
+                              <h4>JOVANA MILIC</h4>
+                            </div>
+                            <div class="price">
+                              <p>10,500<span>SAR</span></p>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -332,93 +615,307 @@
                   </div>
                 </div>
               </div>
-              <div class="car__card">
-                <div class="car__time">
-                  <p>Thursday 12 Dec 2019 - 15:10</p>
-                </div>
-                <div class="car__image">
-                  <div class="auction__icon"></div>
-                  <label class="favourites" for="favourites-star2">
-                    <input type="checkbox" name="favourites-star" id="favourites-star2">
-                    <span class="favourite-icon"></span>
-                  </label>
-                </div>
-                <div class="car__name">
-                  <h2>Toyota Camry SE</h2>
-                  <span>2019</span>
-                </div>
-                <div class="car__views">
-                  <p><img src="assets/accident.svg" alt="" /> Accident</p>
-                  <p><img src="assets/view.svg" alt="" />7,732 Views</p>
-                </div>
-                <div class="car__location">
-                  <img src="assets/location.svg" alt="" />
-                  <div class="location">
-                    <p>Location</p>
-                    <h4>Riyadh Yard, Saudi Arabia</h4>
+              <div class="columntwo flex__wrapper flex__wrapper--column">
+                <div class="car__card">
+                  <div class="car__time">
+                    <p>Thursday 12 Dec 2019 - 15:10</p>
                   </div>
-                </div>
-                <div class="car__buysell">
-                  <div class="car__sold">
-                    <img src="assets/sold.svg" alt="" />
-                    <div class="sellbuy">
-                      <p>Sold for</p>
-                      <h4>23,911 <span>SAR</span></h4>
+                  <div class="car__image">
+                    <div class="auction__icon"></div>
+                    <label class="favourites" for="favourites-star4">
+                      <input
+                        type="checkbox"
+                        name="favourites-star"
+                        id="favourites-star4"
+                      />
+                      <span class="favourite-icon"></span>
+                    </label>
+                  </div>
+                  <div class="car__name">
+                    <h2>Toyota Camry SE</h2>
+                    <span>2019</span>
+                  </div>
+                  <div class="car__views">
+                    <p><img src="assets/accident.svg" alt="" /> Accident</p>
+                    <p><img src="assets/view.svg" alt="" />7,732 Views</p>
+                  </div>
+                  <div class="car__location">
+                    <img src="assets/location.svg" alt="" />
+                    <div class="location">
+                      <p>Location</p>
+                      <h4>Riyadh Yard, Saudi Arabia</h4>
                     </div>
                   </div>
-                  <div class="car__buy">
-                    <img src="assets/buy.svg" alt="" />
-                    <div class="sellbuy">
-                      <p>Buy now</p>
-                      <h4>23,911 <span>SAR</span></h4>
+                  <div class="car__buysell">
+                    <div class="car__sold">
+                      <img src="assets/sold.svg" alt="" />
+                      <div class="sellbuy">
+                        <p>Sold for</p>
+                        <h4>23,911 <span>SAR</span></h4>
+                      </div>
+                    </div>
+                    <div class="car__buy">
+                      <img src="assets/buy.svg" alt="" />
+                      <div class="sellbuy">
+                        <p>Buy now</p>
+                        <h4>23,911 <span>SAR</span></h4>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="viewbids">
+                    <div class="collapsible">
+                      <input
+                        type="checkbox"
+                        id="collapsiblefour"
+                        class="toggle"
+                      />
+                      <label for="collapsiblefour" class="collapse-toggle"
+                        >View 3 Bids</label
+                      >
+                      <div class="collapsible__content">
+                        <div class="collapsible__content--content">
+                          <div class="content--inner">
+                            <div class="calendar">
+                              <img src="assets/calendar.svg" alt="calendar" />
+                              <h4>1.</h4>
+                            </div>
+                            <div class="name">
+                              <p>10 Dec 2019 - 20:05</p>
+                              <h4>JOVANA MILIC</h4>
+                            </div>
+                            <div class="price">
+                              <p>10,500<span>SAR</span></p>
+                            </div>
+                          </div>
+                          <div class="content--inner">
+                            <div class="calendar">
+                              <img src="assets/calendar.svg" alt="calendar" />
+                              <h4>1.</h4>
+                            </div>
+                            <div class="name">
+                              <p>10 Dec 2019 - 20:05</p>
+                              <h4>JOVANA MILIC</h4>
+                            </div>
+                            <div class="price">
+                              <p>10,500<span>SAR</span></p>
+                            </div>
+                          </div>
+                          <div class="content--inner">
+                            <div class="calendar">
+                              <img src="assets/calendar.svg" alt="calendar" />
+                              <h4>1.</h4>
+                            </div>
+                            <div class="name">
+                              <p>10 Dec 2019 - 20:05</p>
+                              <h4>JOVANA MILIC</h4>
+                            </div>
+                            <div class="price">
+                              <p>10,500<span>SAR</span></p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div class="viewbids">
-                  <div class="collapsible">
-                    <input type="checkbox" id="collapsibletwo" class="toggle" />
-                    <label for="collapsibletwo" class="collapse-toggle"
-                      >View 3 Bids</label
-                    >
-                    <div class="collapsible__content">
-                      <div class="collapsible__content--content">
-                        <div class="content--inner">
-                          <div class="calendar">
-                            <img src="assets/calendar.svg" alt="calendar" />
-                            <h4>1.</h4>
+                <div class="car__card">
+                  <div class="car__time">
+                    <p>Thursday 12 Dec 2019 - 15:10</p>
+                  </div>
+                  <div class="car__image">
+                    <div class="auction__icon"></div>
+                    <label class="favourites" for="favourites-star5">
+                      <input
+                        type="checkbox"
+                        name="favourites-star"
+                        id="favourites-star5"
+                      />
+                      <span class="favourite-icon"></span>
+                    </label>
+                  </div>
+                  <div class="car__name">
+                    <h2>Toyota Camry SE</h2>
+                    <span>2019</span>
+                  </div>
+                  <div class="car__views">
+                    <p><img src="assets/accident.svg" alt="" /> Accident</p>
+                    <p><img src="assets/view.svg" alt="" />7,732 Views</p>
+                  </div>
+                  <div class="car__location">
+                    <img src="assets/location.svg" alt="" />
+                    <div class="location">
+                      <p>Location</p>
+                      <h4>Riyadh Yard, Saudi Arabia</h4>
+                    </div>
+                  </div>
+                  <div class="car__buysell">
+                    <div class="car__sold">
+                      <img src="assets/sold.svg" alt="" />
+                      <div class="sellbuy">
+                        <p>Sold for</p>
+                        <h4>23,911 <span>SAR</span></h4>
+                      </div>
+                    </div>
+                    <div class="car__buy">
+                      <img src="assets/buy.svg" alt="" />
+                      <div class="sellbuy">
+                        <p>Buy now</p>
+                        <h4>23,911 <span>SAR</span></h4>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="viewbids">
+                    <div class="collapsible">
+                      <input
+                        type="checkbox"
+                        id="collapsiblefive"
+                        class="toggle"
+                      />
+                      <label for="collapsiblefive" class="collapse-toggle"
+                        >View 3 Bids</label
+                      >
+                      <div class="collapsible__content">
+                        <div class="collapsible__content--content">
+                          <div class="content--inner">
+                            <div class="calendar">
+                              <img src="assets/calendar.svg" alt="calendar" />
+                              <h4>1.</h4>
+                            </div>
+                            <div class="name">
+                              <p>10 Dec 2019 - 20:05</p>
+                              <h4>JOVANA MILIC</h4>
+                            </div>
+                            <div class="price">
+                              <p>10,500<span>SAR</span></p>
+                            </div>
                           </div>
-                          <div class="name">
-                            <p>10 Dec 2019 - 20:05</p>
-                            <h4>JOVANA MILIC</h4>
+                          <div class="content--inner">
+                            <div class="calendar">
+                              <img src="assets/calendar.svg" alt="calendar" />
+                              <h4>1.</h4>
+                            </div>
+                            <div class="name">
+                              <p>10 Dec 2019 - 20:05</p>
+                              <h4>JOVANA MILIC</h4>
+                            </div>
+                            <div class="price">
+                              <p>10,500<span>SAR</span></p>
+                            </div>
                           </div>
-                          <div class="price">
-                            <p>10,500<span>SAR</span></p>
+                          <div class="content--inner">
+                            <div class="calendar">
+                              <img src="assets/calendar.svg" alt="calendar" />
+                              <h4>1.</h4>
+                            </div>
+                            <div class="name">
+                              <p>10 Dec 2019 - 20:05</p>
+                              <h4>JOVANA MILIC</h4>
+                            </div>
+                            <div class="price">
+                              <p>10,500<span>SAR</span></p>
+                            </div>
                           </div>
                         </div>
-                        <div class="content--inner">
-                          <div class="calendar">
-                            <img src="assets/calendar.svg" alt="calendar" />
-                            <h4>1.</h4>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="car__card">
+                  <div class="car__time">
+                    <p>Thursday 12 Dec 2019 - 15:10</p>
+                  </div>
+                  <div class="car__image">
+                    <div class="auction__icon"></div>
+                    <label class="favourites" for="favourites-star6">
+                      <input
+                        type="checkbox"
+                        name="favourites-star"
+                        id="favourites-star6"
+                      />
+                      <span class="favourite-icon"></span>
+                    </label>
+                  </div>
+                  <div class="car__name">
+                    <h2>Toyota Camry SE</h2>
+                    <span>2019</span>
+                  </div>
+                  <div class="car__views">
+                    <p><img src="assets/accident.svg" alt="" /> Accident</p>
+                    <p><img src="assets/view.svg" alt="" />7,732 Views</p>
+                  </div>
+                  <div class="car__location">
+                    <img src="assets/location.svg" alt="" />
+                    <div class="location">
+                      <p>Location</p>
+                      <h4>Riyadh Yard, Saudi Arabia</h4>
+                    </div>
+                  </div>
+                  <div class="car__buysell">
+                    <div class="car__sold">
+                      <img src="assets/sold.svg" alt="" />
+                      <div class="sellbuy">
+                        <p>Sold for</p>
+                        <h4>23,911 <span>SAR</span></h4>
+                      </div>
+                    </div>
+                    <div class="car__buy">
+                      <img src="assets/buy.svg" alt="" />
+                      <div class="sellbuy">
+                        <p>Buy now</p>
+                        <h4>23,911 <span>SAR</span></h4>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="viewbids">
+                    <div class="collapsible">
+                      <input
+                        type="checkbox"
+                        id="collapsiblesix"
+                        class="toggle"
+                      />
+                      <label for="collapsiblesix" class="collapse-toggle"
+                        >View 3 Bids</label
+                      >
+                      <div class="collapsible__content">
+                        <div class="collapsible__content--content">
+                          <div class="content--inner">
+                            <div class="calendar">
+                              <img src="assets/calendar.svg" alt="calendar" />
+                              <h4>1.</h4>
+                            </div>
+                            <div class="name">
+                              <p>10 Dec 2019 - 20:05</p>
+                              <h4>JOVANA MILIC</h4>
+                            </div>
+                            <div class="price">
+                              <p>10,500<span>SAR</span></p>
+                            </div>
                           </div>
-                          <div class="name">
-                            <p>10 Dec 2019 - 20:05</p>
-                            <h4>JOVANA MILIC</h4>
+                          <div class="content--inner">
+                            <div class="calendar">
+                              <img src="assets/calendar.svg" alt="calendar" />
+                              <h4>1.</h4>
+                            </div>
+                            <div class="name">
+                              <p>10 Dec 2019 - 20:05</p>
+                              <h4>JOVANA MILIC</h4>
+                            </div>
+                            <div class="price">
+                              <p>10,500<span>SAR</span></p>
+                            </div>
                           </div>
-                          <div class="price">
-                            <p>10,500<span>SAR</span></p>
-                          </div>
-                        </div>
-                        <div class="content--inner">
-                          <div class="calendar">
-                            <img src="assets/calendar.svg" alt="calendar" />
-                            <h4>1.</h4>
-                          </div>
-                          <div class="name">
-                            <p>10 Dec 2019 - 20:05</p>
-                            <h4>JOVANA MILIC</h4>
-                          </div>
-                          <div class="price">
-                            <p>10,500<span>SAR</span></p>
+                          <div class="content--inner">
+                            <div class="calendar">
+                              <img src="assets/calendar.svg" alt="calendar" />
+                              <h4>1.</h4>
+                            </div>
+                            <div class="name">
+                              <p>10 Dec 2019 - 20:05</p>
+                              <h4>JOVANA MILIC</h4>
+                            </div>
+                            <div class="price">
+                              <p>10,500<span>SAR</span></p>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -426,97 +923,307 @@
                   </div>
                 </div>
               </div>
-              <div class="car__card">
-                <div class="car__time">
-                  <p>Thursday 12 Dec 2019 - 15:10</p>
-                </div>
-                <div class="car__image">
-                  <div class="auction__icon"></div>
-                  <label class="favourites" for="favourites-star3">
-                    <input type="checkbox" name="favourites-star" id="favourites-star3">
-                    <span class="favourite-icon"></span>
-                  </label>
-                </div>
-                <div class="car__name">
-                  <h2>Toyota Camry SE</h2>
-                  <span>2019</span>
-                </div>
-                <div class="car__views">
-                  <p><img src="assets/accident.svg" alt="" /> Accident</p>
-                  <p><img src="assets/view.svg" alt="" />7,732 Views</p>
-                </div>
-                <div class="car__location">
-                  <img src="assets/location.svg" alt="" />
-                  <div class="location">
-                    <p>Location</p>
-                    <h4>Riyadh Yard, Saudi Arabia</h4>
+              <div class="columnthree flex__wrapper flex__wrapper--column">
+                <div class="car__card">
+                  <div class="car__time">
+                    <p>Thursday 12 Dec 2019 - 15:10</p>
                   </div>
-                </div>
-                <div class="car__buysell">
-                  <div class="car__sold">
-                    <img src="assets/sold.svg" alt="" />
-                    <div class="sellbuy">
-                      <p>Sold for</p>
-                      <h4>23,911 <span>SAR</span></h4>
+                  <div class="car__image">
+                    <div class="auction__icon"></div>
+                    <label class="favourites" for="favourites-star7">
+                      <input
+                        type="checkbox"
+                        name="favourites-star"
+                        id="favourites-star7"
+                      />
+                      <span class="favourite-icon"></span>
+                    </label>
+                  </div>
+                  <div class="car__name">
+                    <h2>Toyota Camry SE</h2>
+                    <span>2019</span>
+                  </div>
+                  <div class="car__views">
+                    <p><img src="assets/accident.svg" alt="" /> Accident</p>
+                    <p><img src="assets/view.svg" alt="" />7,732 Views</p>
+                  </div>
+                  <div class="car__location">
+                    <img src="assets/location.svg" alt="" />
+                    <div class="location">
+                      <p>Location</p>
+                      <h4>Riyadh Yard, Saudi Arabia</h4>
                     </div>
                   </div>
-                  <div class="car__buy">
-                    <img src="assets/buy.svg" alt="" />
-                    <div class="sellbuy">
-                      <p>Buy now</p>
-                      <h4>23,911 <span>SAR</span></h4>
+                  <div class="car__buysell">
+                    <div class="car__sold">
+                      <img src="assets/sold.svg" alt="" />
+                      <div class="sellbuy">
+                        <p>Sold for</p>
+                        <h4>23,911 <span>SAR</span></h4>
+                      </div>
+                    </div>
+                    <div class="car__buy">
+                      <img src="assets/buy.svg" alt="" />
+                      <div class="sellbuy">
+                        <p>Buy now</p>
+                        <h4>23,911 <span>SAR</span></h4>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="viewbids">
+                    <div class="collapsible">
+                      <input
+                        type="checkbox"
+                        id="collapsibleseven"
+                        class="toggle"
+                      />
+                      <label for="collapsibleseven" class="collapse-toggle"
+                        >View 3 Bids</label
+                      >
+                      <div class="collapsible__content">
+                        <div class="collapsible__content--content">
+                          <div class="content--inner">
+                            <div class="calendar">
+                              <img src="assets/calendar.svg" alt="calendar" />
+                              <h4>1.</h4>
+                            </div>
+                            <div class="name">
+                              <p>10 Dec 2019 - 20:05</p>
+                              <h4>JOVANA MILIC</h4>
+                            </div>
+                            <div class="price">
+                              <p>10,500<span>SAR</span></p>
+                            </div>
+                          </div>
+                          <div class="content--inner">
+                            <div class="calendar">
+                              <img src="assets/calendar.svg" alt="calendar" />
+                              <h4>1.</h4>
+                            </div>
+                            <div class="name">
+                              <p>10 Dec 2019 - 20:05</p>
+                              <h4>JOVANA MILIC</h4>
+                            </div>
+                            <div class="price">
+                              <p>10,500<span>SAR</span></p>
+                            </div>
+                          </div>
+                          <div class="content--inner">
+                            <div class="calendar">
+                              <img src="assets/calendar.svg" alt="calendar" />
+                              <h4>1.</h4>
+                            </div>
+                            <div class="name">
+                              <p>10 Dec 2019 - 20:05</p>
+                              <h4>JOVANA MILIC</h4>
+                            </div>
+                            <div class="price">
+                              <p>10,500<span>SAR</span></p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div class="viewbids">
-                  <div class="collapsible">
-                    <input
-                      type="checkbox"
-                      id="collapsiblethree"
-                      class="toggle"
-                    />
-                    <label for="collapsiblethree" class="collapse-toggle"
-                      >View 3 Bids</label
-                    >
-                    <div class="collapsible__content">
-                      <div class="collapsible__content--content">
-                        <div class="content--inner">
-                          <div class="calendar">
-                            <img src="assets/calendar.svg" alt="calendar" />
-                            <h4>1.</h4>
+                <div class="car__card">
+                  <div class="car__time">
+                    <p>Thursday 12 Dec 2019 - 15:10</p>
+                  </div>
+                  <div class="car__image">
+                    <div class="auction__icon"></div>
+                    <label class="favourites" for="favourites-star8">
+                      <input
+                        type="checkbox"
+                        name="favourites-star"
+                        id="favourites-star8"
+                      />
+                      <span class="favourite-icon"></span>
+                    </label>
+                  </div>
+                  <div class="car__name">
+                    <h2>Toyota Camry SE</h2>
+                    <span>2019</span>
+                  </div>
+                  <div class="car__views">
+                    <p><img src="assets/accident.svg" alt="" /> Accident</p>
+                    <p><img src="assets/view.svg" alt="" />7,732 Views</p>
+                  </div>
+                  <div class="car__location">
+                    <img src="assets/location.svg" alt="" />
+                    <div class="location">
+                      <p>Location</p>
+                      <h4>Riyadh Yard, Saudi Arabia</h4>
+                    </div>
+                  </div>
+                  <div class="car__buysell">
+                    <div class="car__sold">
+                      <img src="assets/sold.svg" alt="" />
+                      <div class="sellbuy">
+                        <p>Sold for</p>
+                        <h4>23,911 <span>SAR</span></h4>
+                      </div>
+                    </div>
+                    <div class="car__buy">
+                      <img src="assets/buy.svg" alt="" />
+                      <div class="sellbuy">
+                        <p>Buy now</p>
+                        <h4>23,911 <span>SAR</span></h4>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="viewbids">
+                    <div class="collapsible">
+                      <input
+                        type="checkbox"
+                        id="collapsibleeight"
+                        class="toggle"
+                      />
+                      <label for="collapsibleeight" class="collapse-toggle"
+                        >View 3 Bids</label
+                      >
+                      <div class="collapsible__content">
+                        <div class="collapsible__content--content">
+                          <div class="content--inner">
+                            <div class="calendar">
+                              <img src="assets/calendar.svg" alt="calendar" />
+                              <h4>1.</h4>
+                            </div>
+                            <div class="name">
+                              <p>10 Dec 2019 - 20:05</p>
+                              <h4>JOVANA MILIC</h4>
+                            </div>
+                            <div class="price">
+                              <p>10,500<span>SAR</span></p>
+                            </div>
                           </div>
-                          <div class="name">
-                            <p>10 Dec 2019 - 20:05</p>
-                            <h4>JOVANA MILIC</h4>
+                          <div class="content--inner">
+                            <div class="calendar">
+                              <img src="assets/calendar.svg" alt="calendar" />
+                              <h4>1.</h4>
+                            </div>
+                            <div class="name">
+                              <p>10 Dec 2019 - 20:05</p>
+                              <h4>JOVANA MILIC</h4>
+                            </div>
+                            <div class="price">
+                              <p>10,500<span>SAR</span></p>
+                            </div>
                           </div>
-                          <div class="price">
-                            <p>10,500<span>SAR</span></p>
+                          <div class="content--inner">
+                            <div class="calendar">
+                              <img src="assets/calendar.svg" alt="calendar" />
+                              <h4>1.</h4>
+                            </div>
+                            <div class="name">
+                              <p>10 Dec 2019 - 20:05</p>
+                              <h4>JOVANA MILIC</h4>
+                            </div>
+                            <div class="price">
+                              <p>10,500<span>SAR</span></p>
+                            </div>
                           </div>
                         </div>
-                        <div class="content--inner">
-                          <div class="calendar">
-                            <img src="assets/calendar.svg" alt="calendar" />
-                            <h4>1.</h4>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="car__card">
+                  <div class="car__time">
+                    <p>Thursday 12 Dec 2019 - 15:10</p>
+                  </div>
+                  <div class="car__image">
+                    <div class="auction__icon"></div>
+                    <label class="favourites" for="favourites-star9">
+                      <input
+                        type="checkbox"
+                        name="favourites-star"
+                        id="favourites-star9"
+                      />
+                      <span class="favourite-icon"></span>
+                    </label>
+                  </div>
+                  <div class="car__name">
+                    <h2>Toyota Camry SE</h2>
+                    <span>2019</span>
+                  </div>
+                  <div class="car__views">
+                    <p><img src="assets/accident.svg" alt="" /> Accident</p>
+                    <p><img src="assets/view.svg" alt="" />7,732 Views</p>
+                  </div>
+                  <div class="car__location">
+                    <img src="assets/location.svg" alt="" />
+                    <div class="location">
+                      <p>Location</p>
+                      <h4>Riyadh Yard, Saudi Arabia</h4>
+                    </div>
+                  </div>
+                  <div class="car__buysell">
+                    <div class="car__sold">
+                      <img src="assets/sold.svg" alt="" />
+                      <div class="sellbuy">
+                        <p>Sold for</p>
+                        <h4>23,911 <span>SAR</span></h4>
+                      </div>
+                    </div>
+                    <div class="car__buy">
+                      <img src="assets/buy.svg" alt="" />
+                      <div class="sellbuy">
+                        <p>Buy now</p>
+                        <h4>23,911 <span>SAR</span></h4>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="viewbids">
+                    <div class="collapsible">
+                      <input
+                        type="checkbox"
+                        id="collapsiblenine"
+                        class="toggle"
+                      />
+                      <label for="collapsiblenine" class="collapse-toggle"
+                        >View 3 Bids</label
+                      >
+                      <div class="collapsible__content">
+                        <div class="collapsible__content--content">
+                          <div class="content--inner">
+                            <div class="calendar">
+                              <img src="assets/calendar.svg" alt="calendar" />
+                              <h4>1.</h4>
+                            </div>
+                            <div class="name">
+                              <p>10 Dec 2019 - 20:05</p>
+                              <h4>JOVANA MILIC</h4>
+                            </div>
+                            <div class="price">
+                              <p>10,500<span>SAR</span></p>
+                            </div>
                           </div>
-                          <div class="name">
-                            <p>10 Dec 2019 - 20:05</p>
-                            <h4>JOVANA MILIC</h4>
+                          <div class="content--inner">
+                            <div class="calendar">
+                              <img src="assets/calendar.svg" alt="calendar" />
+                              <h4>1.</h4>
+                            </div>
+                            <div class="name">
+                              <p>10 Dec 2019 - 20:05</p>
+                              <h4>JOVANA MILIC</h4>
+                            </div>
+                            <div class="price">
+                              <p>10,500<span>SAR</span></p>
+                            </div>
                           </div>
-                          <div class="price">
-                            <p>10,500<span>SAR</span></p>
-                          </div>
-                        </div>
-                        <div class="content--inner">
-                          <div class="calendar">
-                            <img src="assets/calendar.svg" alt="calendar" />
-                            <h4>1.</h4>
-                          </div>
-                          <div class="name">
-                            <p>10 Dec 2019 - 20:05</p>
-                            <h4>JOVANA MILIC</h4>
-                          </div>
-                          <div class="price">
-                            <p>10,500<span>SAR</span></p>
+                          <div class="content--inner">
+                            <div class="calendar">
+                              <img src="assets/calendar.svg" alt="calendar" />
+                              <h4>1.</h4>
+                            </div>
+                            <div class="name">
+                              <p>10 Dec 2019 - 20:05</p>
+                              <h4>JOVANA MILIC</h4>
+                            </div>
+                            <div class="price">
+                              <p>10,500<span>SAR</span></p>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -525,612 +1232,23 @@
                 </div>
               </div>
             </div>
-            <div class="columntwo flex__wrapper flex__wrapper--column">
-              <div class="car__card">
-                <div class="car__time">
-                  <p>Thursday 12 Dec 2019 - 15:10</p>
-                </div>
-                <div class="car__image">
-                  <div class="auction__icon"></div>
-                  <label class="favourites" for="favourites-star4">
-                    <input type="checkbox" name="favourites-star" id="favourites-star4">
-                    <span class="favourite-icon"></span>
-                  </label>
-                </div>
-                <div class="car__name">
-                  <h2>Toyota Camry SE</h2>
-                  <span>2019</span>
-                </div>
-                <div class="car__views">
-                  <p><img src="assets/accident.svg" alt="" /> Accident</p>
-                  <p><img src="assets/view.svg" alt="" />7,732 Views</p>
-                </div>
-                <div class="car__location">
-                  <img src="assets/location.svg" alt="" />
-                  <div class="location">
-                    <p>Location</p>
-                    <h4>Riyadh Yard, Saudi Arabia</h4>
-                  </div>
-                </div>
-                <div class="car__buysell">
-                  <div class="car__sold">
-                    <img src="assets/sold.svg" alt="" />
-                    <div class="sellbuy">
-                      <p>Sold for</p>
-                      <h4>23,911 <span>SAR</span></h4>
-                    </div>
-                  </div>
-                  <div class="car__buy">
-                    <img src="assets/buy.svg" alt="" />
-                    <div class="sellbuy">
-                      <p>Buy now</p>
-                      <h4>23,911 <span>SAR</span></h4>
-                    </div>
-                  </div>
-                </div>
-                <div class="viewbids">
-                  <div class="collapsible">
-                    <input
-                      type="checkbox"
-                      id="collapsiblefour"
-                      class="toggle"
-                    />
-                    <label for="collapsiblefour" class="collapse-toggle"
-                      >View 3 Bids</label
-                    >
-                    <div class="collapsible__content">
-                      <div class="collapsible__content--content">
-                        <div class="content--inner">
-                          <div class="calendar">
-                            <img src="assets/calendar.svg" alt="calendar" />
-                            <h4>1.</h4>
-                          </div>
-                          <div class="name">
-                            <p>10 Dec 2019 - 20:05</p>
-                            <h4>JOVANA MILIC</h4>
-                          </div>
-                          <div class="price">
-                            <p>10,500<span>SAR</span></p>
-                          </div>
-                        </div>
-                        <div class="content--inner">
-                          <div class="calendar">
-                            <img src="assets/calendar.svg" alt="calendar" />
-                            <h4>1.</h4>
-                          </div>
-                          <div class="name">
-                            <p>10 Dec 2019 - 20:05</p>
-                            <h4>JOVANA MILIC</h4>
-                          </div>
-                          <div class="price">
-                            <p>10,500<span>SAR</span></p>
-                          </div>
-                        </div>
-                        <div class="content--inner">
-                          <div class="calendar">
-                            <img src="assets/calendar.svg" alt="calendar" />
-                            <h4>1.</h4>
-                          </div>
-                          <div class="name">
-                            <p>10 Dec 2019 - 20:05</p>
-                            <h4>JOVANA MILIC</h4>
-                          </div>
-                          <div class="price">
-                            <p>10,500<span>SAR</span></p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="car__card">
-                <div class="car__time">
-                  <p>Thursday 12 Dec 2019 - 15:10</p>
-                </div>
-                <div class="car__image">
-                  <div class="auction__icon"></div>
-                  <label class="favourites" for="favourites-star5">
-                    <input type="checkbox" name="favourites-star" id="favourites-star5">
-                    <span class="favourite-icon"></span>
-                  </label>
-                </div>
-                <div class="car__name">
-                  <h2>Toyota Camry SE</h2>
-                  <span>2019</span>
-                </div>
-                <div class="car__views">
-                  <p><img src="assets/accident.svg" alt="" /> Accident</p>
-                  <p><img src="assets/view.svg" alt="" />7,732 Views</p>
-                </div>
-                <div class="car__location">
-                  <img src="assets/location.svg" alt="" />
-                  <div class="location">
-                    <p>Location</p>
-                    <h4>Riyadh Yard, Saudi Arabia</h4>
-                  </div>
-                </div>
-                <div class="car__buysell">
-                  <div class="car__sold">
-                    <img src="assets/sold.svg" alt="" />
-                    <div class="sellbuy">
-                      <p>Sold for</p>
-                      <h4>23,911 <span>SAR</span></h4>
-                    </div>
-                  </div>
-                  <div class="car__buy">
-                    <img src="assets/buy.svg" alt="" />
-                    <div class="sellbuy">
-                      <p>Buy now</p>
-                      <h4>23,911 <span>SAR</span></h4>
-                    </div>
-                  </div>
-                </div>
-                <div class="viewbids">
-                  <div class="collapsible">
-                    <input
-                      type="checkbox"
-                      id="collapsiblefive"
-                      class="toggle"
-                    />
-                    <label for="collapsiblefive" class="collapse-toggle"
-                      >View 3 Bids</label
-                    >
-                    <div class="collapsible__content">
-                      <div class="collapsible__content--content">
-                        <div class="content--inner">
-                          <div class="calendar">
-                            <img src="assets/calendar.svg" alt="calendar" />
-                            <h4>1.</h4>
-                          </div>
-                          <div class="name">
-                            <p>10 Dec 2019 - 20:05</p>
-                            <h4>JOVANA MILIC</h4>
-                          </div>
-                          <div class="price">
-                            <p>10,500<span>SAR</span></p>
-                          </div>
-                        </div>
-                        <div class="content--inner">
-                          <div class="calendar">
-                            <img src="assets/calendar.svg" alt="calendar" />
-                            <h4>1.</h4>
-                          </div>
-                          <div class="name">
-                            <p>10 Dec 2019 - 20:05</p>
-                            <h4>JOVANA MILIC</h4>
-                          </div>
-                          <div class="price">
-                            <p>10,500<span>SAR</span></p>
-                          </div>
-                        </div>
-                        <div class="content--inner">
-                          <div class="calendar">
-                            <img src="assets/calendar.svg" alt="calendar" />
-                            <h4>1.</h4>
-                          </div>
-                          <div class="name">
-                            <p>10 Dec 2019 - 20:05</p>
-                            <h4>JOVANA MILIC</h4>
-                          </div>
-                          <div class="price">
-                            <p>10,500<span>SAR</span></p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="car__card">
-                <div class="car__time">
-                  <p>Thursday 12 Dec 2019 - 15:10</p>
-                </div>
-                <div class="car__image">
-                  <div class="auction__icon"></div>
-                  <label class="favourites" for="favourites-star6">
-                    <input type="checkbox" name="favourites-star" id="favourites-star6">
-                    <span class="favourite-icon"></span>
-                  </label>
-                </div>
-                <div class="car__name">
-                  <h2>Toyota Camry SE</h2>
-                  <span>2019</span>
-                </div>
-                <div class="car__views">
-                  <p><img src="assets/accident.svg" alt="" /> Accident</p>
-                  <p><img src="assets/view.svg" alt="" />7,732 Views</p>
-                </div>
-                <div class="car__location">
-                  <img src="assets/location.svg" alt="" />
-                  <div class="location">
-                    <p>Location</p>
-                    <h4>Riyadh Yard, Saudi Arabia</h4>
-                  </div>
-                </div>
-                <div class="car__buysell">
-                  <div class="car__sold">
-                    <img src="assets/sold.svg" alt="" />
-                    <div class="sellbuy">
-                      <p>Sold for</p>
-                      <h4>23,911 <span>SAR</span></h4>
-                    </div>
-                  </div>
-                  <div class="car__buy">
-                    <img src="assets/buy.svg" alt="" />
-                    <div class="sellbuy">
-                      <p>Buy now</p>
-                      <h4>23,911 <span>SAR</span></h4>
-                    </div>
-                  </div>
-                </div>
-                <div class="viewbids">
-                  <div class="collapsible">
-                    <input type="checkbox" id="collapsiblesix" class="toggle" />
-                    <label for="collapsiblesix" class="collapse-toggle"
-                      >View 3 Bids</label
-                    >
-                    <div class="collapsible__content">
-                      <div class="collapsible__content--content">
-                        <div class="content--inner">
-                          <div class="calendar">
-                            <img src="assets/calendar.svg" alt="calendar" />
-                            <h4>1.</h4>
-                          </div>
-                          <div class="name">
-                            <p>10 Dec 2019 - 20:05</p>
-                            <h4>JOVANA MILIC</h4>
-                          </div>
-                          <div class="price">
-                            <p>10,500<span>SAR</span></p>
-                          </div>
-                        </div>
-                        <div class="content--inner">
-                          <div class="calendar">
-                            <img src="assets/calendar.svg" alt="calendar" />
-                            <h4>1.</h4>
-                          </div>
-                          <div class="name">
-                            <p>10 Dec 2019 - 20:05</p>
-                            <h4>JOVANA MILIC</h4>
-                          </div>
-                          <div class="price">
-                            <p>10,500<span>SAR</span></p>
-                          </div>
-                        </div>
-                        <div class="content--inner">
-                          <div class="calendar">
-                            <img src="assets/calendar.svg" alt="calendar" />
-                            <h4>1.</h4>
-                          </div>
-                          <div class="name">
-                            <p>10 Dec 2019 - 20:05</p>
-                            <h4>JOVANA MILIC</h4>
-                          </div>
-                          <div class="price">
-                            <p>10,500<span>SAR</span></p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="columnthree flex__wrapper flex__wrapper--column">
-              <div class="car__card">
-                <div class="car__time">
-                  <p>Thursday 12 Dec 2019 - 15:10</p>
-                </div>
-                <div class="car__image">
-                  <div class="auction__icon"></div>
-                  <label class="favourites" for="favourites-star7">
-                    <input type="checkbox" name="favourites-star" id="favourites-star7">
-                    <span class="favourite-icon"></span>
-                  </label>
-                </div>
-                <div class="car__name">
-                  <h2>Toyota Camry SE</h2>
-                  <span>2019</span>
-                </div>
-                <div class="car__views">
-                  <p><img src="assets/accident.svg" alt="" /> Accident</p>
-                  <p><img src="assets/view.svg" alt="" />7,732 Views</p>
-                </div>
-                <div class="car__location">
-                  <img src="assets/location.svg" alt="" />
-                  <div class="location">
-                    <p>Location</p>
-                    <h4>Riyadh Yard, Saudi Arabia</h4>
-                  </div>
-                </div>
-                <div class="car__buysell">
-                  <div class="car__sold">
-                    <img src="assets/sold.svg" alt="" />
-                    <div class="sellbuy">
-                      <p>Sold for</p>
-                      <h4>23,911 <span>SAR</span></h4>
-                    </div>
-                  </div>
-                  <div class="car__buy">
-                    <img src="assets/buy.svg" alt="" />
-                    <div class="sellbuy">
-                      <p>Buy now</p>
-                      <h4>23,911 <span>SAR</span></h4>
-                    </div>
-                  </div>
-                </div>
-                <div class="viewbids">
-                  <div class="collapsible">
-                    <input
-                      type="checkbox"
-                      id="collapsibleseven"
-                      class="toggle"
-                    />
-                    <label for="collapsibleseven" class="collapse-toggle"
-                      >View 3 Bids</label
-                    >
-                    <div class="collapsible__content">
-                      <div class="collapsible__content--content">
-                        <div class="content--inner">
-                          <div class="calendar">
-                            <img src="assets/calendar.svg" alt="calendar" />
-                            <h4>1.</h4>
-                          </div>
-                          <div class="name">
-                            <p>10 Dec 2019 - 20:05</p>
-                            <h4>JOVANA MILIC</h4>
-                          </div>
-                          <div class="price">
-                            <p>10,500<span>SAR</span></p>
-                          </div>
-                        </div>
-                        <div class="content--inner">
-                          <div class="calendar">
-                            <img src="assets/calendar.svg" alt="calendar" />
-                            <h4>1.</h4>
-                          </div>
-                          <div class="name">
-                            <p>10 Dec 2019 - 20:05</p>
-                            <h4>JOVANA MILIC</h4>
-                          </div>
-                          <div class="price">
-                            <p>10,500<span>SAR</span></p>
-                          </div>
-                        </div>
-                        <div class="content--inner">
-                          <div class="calendar">
-                            <img src="assets/calendar.svg" alt="calendar" />
-                            <h4>1.</h4>
-                          </div>
-                          <div class="name">
-                            <p>10 Dec 2019 - 20:05</p>
-                            <h4>JOVANA MILIC</h4>
-                          </div>
-                          <div class="price">
-                            <p>10,500<span>SAR</span></p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="car__card">
-                <div class="car__time">
-                  <p>Thursday 12 Dec 2019 - 15:10</p>
-                </div>
-                <div class="car__image">
-                  <div class="auction__icon"></div>
-                  <label class="favourites" for="favourites-star8">
-                    <input type="checkbox" name="favourites-star" id="favourites-star8">
-                    <span class="favourite-icon"></span>
-                  </label>
-                </div>
-                <div class="car__name">
-                  <h2>Toyota Camry SE</h2>
-                  <span>2019</span>
-                </div>
-                <div class="car__views">
-                  <p><img src="assets/accident.svg" alt="" /> Accident</p>
-                  <p><img src="assets/view.svg" alt="" />7,732 Views</p>
-                </div>
-                <div class="car__location">
-                  <img src="assets/location.svg" alt="" />
-                  <div class="location">
-                    <p>Location</p>
-                    <h4>Riyadh Yard, Saudi Arabia</h4>
-                  </div>
-                </div>
-                <div class="car__buysell">
-                  <div class="car__sold">
-                    <img src="assets/sold.svg" alt="" />
-                    <div class="sellbuy">
-                      <p>Sold for</p>
-                      <h4>23,911 <span>SAR</span></h4>
-                    </div>
-                  </div>
-                  <div class="car__buy">
-                    <img src="assets/buy.svg" alt="" />
-                    <div class="sellbuy">
-                      <p>Buy now</p>
-                      <h4>23,911 <span>SAR</span></h4>
-                    </div>
-                  </div>
-                </div>
-                <div class="viewbids">
-                  <div class="collapsible">
-                    <input
-                      type="checkbox"
-                      id="collapsibleeight"
-                      class="toggle"
-                    />
-                    <label for="collapsibleeight" class="collapse-toggle"
-                      >View 3 Bids</label
-                    >
-                    <div class="collapsible__content">
-                      <div class="collapsible__content--content">
-                        <div class="content--inner">
-                          <div class="calendar">
-                            <img src="assets/calendar.svg" alt="calendar" />
-                            <h4>1.</h4>
-                          </div>
-                          <div class="name">
-                            <p>10 Dec 2019 - 20:05</p>
-                            <h4>JOVANA MILIC</h4>
-                          </div>
-                          <div class="price">
-                            <p>10,500<span>SAR</span></p>
-                          </div>
-                        </div>
-                        <div class="content--inner">
-                          <div class="calendar">
-                            <img src="assets/calendar.svg" alt="calendar" />
-                            <h4>1.</h4>
-                          </div>
-                          <div class="name">
-                            <p>10 Dec 2019 - 20:05</p>
-                            <h4>JOVANA MILIC</h4>
-                          </div>
-                          <div class="price">
-                            <p>10,500<span>SAR</span></p>
-                          </div>
-                        </div>
-                        <div class="content--inner">
-                          <div class="calendar">
-                            <img src="assets/calendar.svg" alt="calendar" />
-                            <h4>1.</h4>
-                          </div>
-                          <div class="name">
-                            <p>10 Dec 2019 - 20:05</p>
-                            <h4>JOVANA MILIC</h4>
-                          </div>
-                          <div class="price">
-                            <p>10,500<span>SAR</span></p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="car__card">
-                <div class="car__time">
-                  <p>Thursday 12 Dec 2019 - 15:10</p>
-                </div>
-                <div class="car__image">
-                  <div class="auction__icon"></div>
-                  <label class="favourites" for="favourites-star9">
-                    <input type="checkbox" name="favourites-star" id="favourites-star9">
-                    <span class="favourite-icon"></span>
-                  </label>
-                </div>
-                <div class="car__name">
-                  <h2>Toyota Camry SE</h2>
-                  <span>2019</span>
-                </div>
-                <div class="car__views">
-                  <p><img src="assets/accident.svg" alt="" /> Accident</p>
-                  <p><img src="assets/view.svg" alt="" />7,732 Views</p>
-                </div>
-                <div class="car__location">
-                  <img src="assets/location.svg" alt="" />
-                  <div class="location">
-                    <p>Location</p>
-                    <h4>Riyadh Yard, Saudi Arabia</h4>
-                  </div>
-                </div>
-                <div class="car__buysell">
-                  <div class="car__sold">
-                    <img src="assets/sold.svg" alt="" />
-                    <div class="sellbuy">
-                      <p>Sold for</p>
-                      <h4>23,911 <span>SAR</span></h4>
-                    </div>
-                  </div>
-                  <div class="car__buy">
-                    <img src="assets/buy.svg" alt="" />
-                    <div class="sellbuy">
-                      <p>Buy now</p>
-                      <h4>23,911 <span>SAR</span></h4>
-                    </div>
-                  </div>
-                </div>
-                <div class="viewbids">
-                  <div class="collapsible">
-                    <input
-                      type="checkbox"
-                      id="collapsiblenine"
-                      class="toggle"
-                    />
-                    <label for="collapsiblenine" class="collapse-toggle"
-                      >View 3 Bids</label
-                    >
-                    <div class="collapsible__content">
-                      <div class="collapsible__content--content">
-                        <div class="content--inner">
-                          <div class="calendar">
-                            <img src="assets/calendar.svg" alt="calendar" />
-                            <h4>1.</h4>
-                          </div>
-                          <div class="name">
-                            <p>10 Dec 2019 - 20:05</p>
-                            <h4>JOVANA MILIC</h4>
-                          </div>
-                          <div class="price">
-                            <p>10,500<span>SAR</span></p>
-                          </div>
-                        </div>
-                        <div class="content--inner">
-                          <div class="calendar">
-                            <img src="assets/calendar.svg" alt="calendar" />
-                            <h4>1.</h4>
-                          </div>
-                          <div class="name">
-                            <p>10 Dec 2019 - 20:05</p>
-                            <h4>JOVANA MILIC</h4>
-                          </div>
-                          <div class="price">
-                            <p>10,500<span>SAR</span></p>
-                          </div>
-                        </div>
-                        <div class="content--inner">
-                          <div class="calendar">
-                            <img src="assets/calendar.svg" alt="calendar" />
-                            <h4>1.</h4>
-                          </div>
-                          <div class="name">
-                            <p>10 Dec 2019 - 20:05</p>
-                            <h4>JOVANA MILIC</h4>
-                          </div>
-                          <div class="price">
-                            <p>10,500<span>SAR</span></p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div class="pagenumber">
+              <div class="number"><p>1</p></div>
+              <div class="numbertwo"><p>2</p></div>
+              <div class="numbertwo"><p>3</p></div>
+              <div class="numbertwo"><p>4</p></div>
+              <div class="numbertwo"><p>5</p></div>
+              <div class="numbertwo mobile__hidden"><p>6</p></div>
+              <div class="numbertwo mobile__hidden"><p>7</p></div>
+              <div class="numbertwo mobile__hidden"><p>8</p></div>
+              <div class="numbertwo mobile__hidden"><p>9</p></div>
+              <div class="numbertwo mobile__hidden"><p>10</p></div>
+              <div class="numbertwo mobile__hidden"><p>11</p></div>
+              <div class="numbertwo mobile__hidden"><p>12</p></div>
             </div>
           </div>
-          <div class="pagenumber">
-            <div class="number"><p>1</p></div>
-            <div class="numbertwo"><p>2</p></div>
-            <div class="numbertwo"><p>3</p></div>
-            <div class="numbertwo"><p>4</p></div>
-            <div class="numbertwo"><p>5</p></div>
-            <div class="numbertwo mobile__hidden"><p>6</p></div>
-            <div class="numbertwo mobile__hidden"><p>7</p></div>
-            <div class="numbertwo mobile__hidden"><p>8</p></div>
-            <div class="numbertwo mobile__hidden"><p>9</p></div>
-            <div class="numbertwo mobile__hidden"><p>10</p></div>
-            <div class="numbertwo mobile__hidden"><p>11</p></div>
-            <div class="numbertwo mobile__hidden"><p>12</p></div>
-          </div>
         </div>
-        </div>
-        </div>
+      </div>
     </section>
 
     <section id="footer">
@@ -1142,36 +1260,47 @@
             <p>House of Vehicles</p>
           </div>
         </div>
-        <div class="terms">          
-        <div class="mobile__logo">
-          <img src="assets/mobile__logo.png" alt="mobilelogo">
-        </div>
+        <div class="terms">
+          <div class="mobile__logo">
+            <img src="assets/mobile__logo.png" alt="mobilelogo" />
+          </div>
           <ul>
             <li><a href="#">Terms & Conditions</a></li>
             <li><a class="mobile__hidden" href="#">Privacy Policy</a></li>
             <li><a href="#">FAQs</a></li>
           </ul>
-          </div>
-          <div class="productname flex__wrapper flex__wrapper--column">
+        </div>
+        <div class="productname">
           <div class="question mobile__hidden">
-            <p>Questions? <a href="mailto:support@carmazad.com">support@carmazad.com</a></p>
+            <p>
+              Questions?
+              <a href="mailto:support@carmazad.com">support@carmazad.com</a>
+            </p>
           </div>
           <div class="social">
             <ul>
-              <li><a href="#"><img src="assets/instagram.svg" alt="instagram"></a></li>
-              <li><a href="#"><img src="assets/facebook.svg" alt="facebook"></a></li>
-              <li><a href="#"><img src="assets/twitter.svg" alt="twitter"></a></li>
+              <li>
+                <a href="#"
+                  ><img src="assets/instagram.svg" alt="instagram"
+                /></a>
+              </li>
+              <li>
+                <a href="#"><img src="assets/facebook.svg" alt="facebook" /></a>
+              </li>
+              <li>
+                <a href="#"><img src="assets/twitter.svg" alt="twitter" /></a>
+              </li>
             </ul>
             <div class="email">
               <a href="mailto:support@carmazad.com">
-              <img src="assets/email.svg" alt="email"></a>
+                <img src="assets/email.svg" alt="email"
+              /></a>
             </div>
           </div>
           <div class="producttext">
             <p>Rasan<span>product</span></p>
           </div>
         </div>
-
       </div>
     </section>
 
