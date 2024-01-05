@@ -65,3 +65,35 @@
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
+
+
+@media screen and (max-width: 720px){
+  .checkbox__container {
+    text-align: center;
+    position: relative;    
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding-left: 0px;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .checkmark {
+    height: 19px;
+    width: 19px;
+    position: relative;
+  }
+
+  .checkbox__container .checkmark:after {
+    left: 50%;
+    top: 50%;
+    width: 3px;
+    height: 7px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg) translate(-125%, -25%);
+  }
+}
