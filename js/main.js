@@ -11,16 +11,16 @@ $(document).ready(function () {
   document.querySelectorAll(".floatingicon").forEach((expand, index) => {
     expand.addEventListener("click", () => {
       const prevBids = document.querySelectorAll(".filterslist")[index];
-      prevBids.classList.toggle("active");
       prevBids.classList.toggle("unactive");
+      prevBids.classList.toggle("active");
     });
   });
 
   document.querySelectorAll(".floatingicon").forEach((expand, index) => {
     expand.addEventListener("click", () => {
       const prevBids = document.querySelectorAll(".backdrop")[index];
-      prevBids.classList.toggle("active");
       prevBids.classList.toggle("unactive");
+      prevBids.classList.toggle("active");
     });
   });
 

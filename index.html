@@ -10,6 +10,7 @@
     />
     <link rel="stylesheet" href="css/hamburger.css" />
     <link rel="stylesheet" href="css/checkbox.css" />
+    <link rel="stylesheet" href="css/rangeslider.css">
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
@@ -132,7 +133,15 @@
           </div>
           <div class="header__search--favourites">
             <div class="circle">
-              <img src="assets/favourites__icon.png" alt="star" />
+              <!-- <img src="assets/favourites__icon.png" alt="star" /> -->
+              <label class="favourites" for="favourites-star">
+                <input
+                  type="checkbox"
+                  name="favourites-star"
+                  id="favourites-star"
+                />
+                <span class="favourite-icon"></span>
+              </label>
             </div>
             <p>Show Favourites</p>
           </div>
@@ -177,9 +186,9 @@
     </section>
 
     <div class="filter__floating">
-    <div class="backdrop"></div>
+    <div class="backdrop unactive"></div>
 
-      <div class="filterslist">
+      <div class="filterslist unactive">
         <form action="#">
           <select id="make">
             <option value="Make">Make</option>
@@ -199,6 +208,7 @@
             <option value="Goa">Goa</option>
             <option value="Delhi">Delhi</option>
           </select>
+          <div class="from__to">
           <select id="From">
             <option value="From">From</option>
             <option value="2000">2000</option>
@@ -211,6 +221,7 @@
             <option value="2023">2023</option>
             <option value="2024">2024</option>
           </select>
+        </div>
           <input
             type="text"
             name="auctionid"
@@ -266,6 +277,7 @@
                   <option value="Goa">Goa</option>
                   <option value="Delhi">Delhi</option>
                 </select>
+                <div class="from__to">
                 <select id="From">
                   <option value="From">From</option>
                   <option value="2000">2000</option>
@@ -278,6 +290,7 @@
                   <option value="2023">2023</option>
                   <option value="2024">2024</option>
                 </select>
+              </div>
                 <input
                   type="text"
                   name="auctionid"
@@ -346,6 +359,7 @@
                         <h4>23,911 <span>SAR</span></h4>
                       </div>
                     </div>
+                    <div class="line"></div>
                     <div class="car__buy">
                       <img src="assets/buy.svg" alt="buy" />
                       <div class="sellbuy">
@@ -448,6 +462,7 @@
                         <h4>23,911 <span>SAR</span></h4>
                       </div>
                     </div>
+                    <div class="line"></div>
                     <div class="car__buy">
                       <img src="assets/buy.svg" alt="" />
                       <div class="sellbuy">
@@ -550,6 +565,7 @@
                         <h4>23,911 <span>SAR</span></h4>
                       </div>
                     </div>
+                    <div class="line"></div>
                     <div class="car__buy">
                       <img src="assets/buy.svg" alt="" />
                       <div class="sellbuy">
@@ -654,6 +670,7 @@
                         <h4>23,911 <span>SAR</span></h4>
                       </div>
                     </div>
+                    <div class="line"></div>
                     <div class="car__buy">
                       <img src="assets/buy.svg" alt="" />
                       <div class="sellbuy">
@@ -756,6 +773,7 @@
                         <h4>23,911 <span>SAR</span></h4>
                       </div>
                     </div>
+                    <div class="line"></div>
                     <div class="car__buy">
                       <img src="assets/buy.svg" alt="" />
                       <div class="sellbuy">
@@ -858,6 +876,7 @@
                         <h4>23,911 <span>SAR</span></h4>
                       </div>
                     </div>
+                    <div class="line"></div>
                     <div class="car__buy">
                       <img src="assets/buy.svg" alt="" />
                       <div class="sellbuy">
@@ -962,6 +981,7 @@
                         <h4>23,911 <span>SAR</span></h4>
                       </div>
                     </div>
+                    <div class="line"></div>
                     <div class="car__buy">
                       <img src="assets/buy.svg" alt="" />
                       <div class="sellbuy">
@@ -1064,6 +1084,7 @@
                         <h4>23,911 <span>SAR</span></h4>
                       </div>
                     </div>
+                    <div class="line"></div>
                     <div class="car__buy">
                       <img src="assets/buy.svg" alt="" />
                       <div class="sellbuy">
@@ -1166,6 +1187,7 @@
                         <h4>23,911 <span>SAR</span></h4>
                       </div>
                     </div>
+                    <div class="line"></div>
                     <div class="car__buy">
                       <img src="assets/buy.svg" alt="" />
                       <div class="sellbuy">

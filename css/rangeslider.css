@@ -1,0 +1,42 @@
+.irs-with-grid .irs-grid {
+    display: none;
+}
+
+.irs--flat .irs-bar {
+    display: none;
+}
+
+.irs--flat .irs-handle {
+    top: 20px;
+    width: 12px;
+    height: 12px;
+    border-radius: 12px;
+    border: 2px solid #1B1B1B;
+    background-color: white;
+}
+
+.irs--flat .irs-handle>i:first-child {
+    display: none;
+}
+
+.irs--flat .irs-line {
+    top: 25px;
+    height: 1.5px;
+    background-color: #989898;
+    border-radius: 4px;
+}
+
+.irs--flat .irs-from, .irs--flat .irs-to, .irs--flat .irs-single {
+    color: #22232B;
+    font-size: 14px;
+    line-height: 21px;
+    text-shadow: none;
+    padding: 1px 5px;
+    background-color: transparent;
+    /* border-radius: 4px; */
+    top: 33px;
+}
+
+.irs--flat .irs-from:before, .irs--flat .irs-to:before, .irs--flat .irs-single:before {
+   display: none;
+}

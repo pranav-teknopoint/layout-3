@@ -63,6 +63,14 @@ body {
   flex-direction: column;
 }
 
+.active {
+  display: block;  
+}
+
+.unactive {
+  display: none;
+}
+
 /******Logo******/
 .main__logo {
   display: flex;
@@ -213,6 +221,7 @@ body {
 .header__search--arrange {
   grid-area: arrange;
   display: flex;
+  justify-content: flex-end;
   gap: 28px;
   margin-left: 70px;
 }
@@ -286,6 +295,26 @@ body {
   box-shadow: 3px 6px 12px #4444441f;
 }
 
+.header__search--favourites input{  
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.header__search--favourites .favourite-icon {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%,-50%);
+  height: 28px;
+  width: 28px;
+  background: transparent url("../assets/star__outline.svg") no-repeat center
+    center;
+  background-size: contain;
+}
+
 .header__search--favourites img {
   width: 25px;
 }
@@ -337,7 +366,7 @@ body {
   height: 75px;
   transform: rotate(45deg);
   background-color: white;
-  top: 50%;
+  top: 165px;
   right: 0;
   z-index: -1;
   box-shadow: 6px 12px 24px #44444414;
@@ -370,6 +399,12 @@ body {
   border-bottom: solid 1.5px #e0e0e0;
   margin-top: 20px;
   padding-bottom: 5px;
+}
+
+.from__to{
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
 }
 
 .filters p {
@@ -437,6 +472,7 @@ body {
   padding: 5px 40px 7px 52px;
   background-image: linear-gradient(90deg, #b94646, #e73054);
   font-family: PoppinsMedium;
+  text-align: center;
   color: white;
   border-radius: 3px;
   margin-bottom: 8px;
@@ -453,7 +489,7 @@ body {
   position: relative;
 }
 
-.car__image .favourites {
+.favourites {
   display: block;
   position: relative;
   padding-left: 35px;
@@ -480,7 +516,7 @@ body {
   background-size: contain;
 }
 
-.car__image .favourites input:checked ~ .favourite-icon {
+.favourites input:checked ~ .favourite-icon {
   background: transparent url("../assets/star__filled.svg") no-repeat center
     center;
   background-size: contain;
@@ -578,7 +614,8 @@ body {
 }
 
 .car__buysell {
-  display: flex;
+  display: flex;  
+  justify-content: space-between;
   padding-top: 15px;
 }
 
@@ -586,15 +623,21 @@ body {
   width: 18px;
 }
 
+.line{
+  width: 1px;
+  height: 31.5px;
+  background-color: #EBEBEB;
+}
+
 .car__sold {
   display: flex;
-  padding-right: 19px;
-  border-right: solid 1px #ebebeb;
+  /* padding-right: 19px; */
+  /* border-right: solid 1px #ebebeb; */
 }
 
 .car__buy {
   display: flex;
-  padding-left: 13px;
+  /* padding-left: 13px; */
 }
 
 .sellbuy {
@@ -1114,10 +1157,6 @@ body {
     text-transform: uppercase;
   }
 
-  .filter__floating {
-    display: block;
-  }
-
   .floatingicon {
     width: 59px;
     height: 59px;
@@ -1142,19 +1181,13 @@ body {
     z-index: 10;
   }
 
-  .active {
-    display: block;
-  }
-
-  .unactive {
-    display: none;
-  }
-
   .filter__floating {
+    display: block;
     position: fixed;
     bottom: 0;
     right: 0;
     z-index: 5;
+    width: 100%;    
   }
 
   .backdrop {
@@ -1237,26 +1270,4 @@ body {
     width: 15.4px;
     margin-right: 100px;
   }
-
-  /* .filter__floating {
-    position: relative;
-  }
-
-  .filtericon input[type="checkbox"] {
-    display: none;
-  }
-
-  .filterslist {
-    max-width: 0px;
-    max-height: 0px;
-    overflow: hidden;
-    transition: max-height 0.25s ease-in-out;
-  }
-
-  .filter-floating:checked + .filterslist {
-    max-width: 100%;
-    max-height: 100vh;
-    position: absolute;
-
-  } */
 }
