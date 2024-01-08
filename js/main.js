@@ -24,4 +24,12 @@ $(document).ready(function () {
     });
   });
 
+  document.querySelectorAll(".hamburger").forEach((expand, index) => {
+    expand.addEventListener("click", () => {
+      const prevBids = document.querySelectorAll(".header__nav")[index];
+      prevBids.classList.toggle(".header__nav");
+      prevBids.classList.toggle("header__nav--column");
+    });
+  });
+
 });

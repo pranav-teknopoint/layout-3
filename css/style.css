@@ -63,8 +63,12 @@ body {
   flex-direction: column;
 }
 
+.desktop__hidden {
+  display: none;
+}
+
 .active {
-  display: block;  
+  display: block;
 }
 
 .unactive {
@@ -216,6 +220,7 @@ body {
   color: #22232b;
   padding-bottom: 9px;
   margin-left: 42.6px;
+  cursor: pointer;
 }
 
 .header__search--arrange {
@@ -274,6 +279,8 @@ body {
   font-size: 17px;
   line-height: 26px;
   color: var(--header-purple);
+  cursor: pointer;
+
 }
 
 .header__search--favourites {
@@ -295,7 +302,7 @@ body {
   box-shadow: 3px 6px 12px #4444441f;
 }
 
-.header__search--favourites input{  
+.header__search--favourites input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
@@ -307,7 +314,7 @@ body {
   position: absolute;
   top: 50%;
   right: 50%;
-  transform: translate(50%,-50%);
+  transform: translate(50%, -50%);
   height: 28px;
   width: 28px;
   background: transparent url("../assets/star__outline.svg") no-repeat center
@@ -350,7 +357,7 @@ body {
 }
 
 .filters {
-  max-width: 283px;
+  /* max-width: 283px; */
   background-color: #ffffff;
   border-radius: 6px;
   padding: 10px 25px 25px 30px;
@@ -368,8 +375,13 @@ body {
   background-color: white;
   top: 165px;
   right: 0;
-  z-index: -1;
-  box-shadow: 6px 12px 24px #44444414;
+  z-index: 0;
+  /* box-shadow: 6px 12px 24px #44444414; */
+}
+
+form{
+  position: relative;
+  z-index: 1;
 }
 
 .filters select {
@@ -383,6 +395,7 @@ body {
   margin-top: 20px;
   padding-bottom: 5px;
   font-family: PoppinsRegular;
+  cursor: pointer;
 }
 
 .filters input[type="text"]::placeholder {
@@ -401,7 +414,7 @@ body {
   padding-bottom: 5px;
 }
 
-.from__to{
+.from__to {
   display: flex;
   justify-content: space-between;
   gap: 16px;
@@ -416,7 +429,8 @@ body {
 }
 
 .search__filter {
-  padding: 16px 88px 14px 15px;
+  padding: 16px 80px 14px 15px;
+  text-align: center;
   background-image: linear-gradient(90deg, #33176c, #6b1d57);
   border-radius: 6px;
   box-shadow: 0px 8px 8px #43425d40;
@@ -614,7 +628,7 @@ body {
 }
 
 .car__buysell {
-  display: flex;  
+  display: flex;
   justify-content: space-between;
   padding-top: 15px;
 }
@@ -623,10 +637,10 @@ body {
   width: 18px;
 }
 
-.line{
+.line {
   width: 1px;
   height: 31.5px;
-  background-color: #EBEBEB;
+  background-color: #ebebeb;
 }
 
 .car__sold {
@@ -778,6 +792,7 @@ body {
   align-items: center;
   justify-content: space-evenly;
 }
+
 .number {
   width: 42px;
   height: 42px;
@@ -790,6 +805,7 @@ body {
   color: white;
   border-radius: 3px;
   margin-right: 26px;
+  cursor: pointer;
 }
 
 .numbertwo {
@@ -805,6 +821,20 @@ body {
   /* color: white; */
   /* border-radius: 3px; */
   margin-right: 26px;
+  position: relative;
+  cursor: pointer;
+}
+
+.pagenumber::after{  
+  content: '';
+  top: 45%;
+  left: 49px;
+  border: solid #383B48;
+  border-width: 0 2px 2px 0;
+  padding: 2px;  
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  cursor: pointer;
 }
 
 /* ******Footer****** */
@@ -919,6 +949,10 @@ body {
     align-items: center;
   }
 
+  .header__nav--column {
+    flex-direction: column;
+  }
+
   .hamburgermenu {
     display: block;
   }
@@ -942,6 +976,10 @@ body {
 
   .header__nav--menu ul {
     display: none;
+  }
+
+  .header__nav--signin {
+    display: block;
   }
 
   .header__nav--signin a {
@@ -1187,14 +1225,15 @@ body {
     bottom: 0;
     right: 0;
     z-index: 5;
-    width: 100%;    
+    width: 100%;
+    transition: all 5s linear;
   }
 
   .backdrop {
     width: 100%;
     height: 100vh;
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
   }
 
   .filterslist {
@@ -1217,8 +1256,8 @@ body {
     background-color: white;
     top: 0px;
     right: 40%;
-    z-index: -10;
-    box-shadow: 6px 12px 24px #44444414;
+    z-index: 0;
+    /* box-shadow: 6px 12px 24px #44444414; */
   }
 
   .filterslist select {
@@ -1232,6 +1271,8 @@ body {
     margin-top: 20px;
     padding-bottom: 5px;
     font-family: PoppinsRegular;
+    cursor: pointer;
+
   }
 
   .filterslist input[type="text"]::placeholder {
@@ -1259,7 +1300,8 @@ body {
   }
 
   .search__filter {
-    padding: 14px 0px 14px 15px;
+    padding: 14px 0px 14px 15px;    
+    text-align: justify;
     background-image: linear-gradient(90deg, #33176c, #6b1d57);
     border-radius: 6px;
     box-shadow: 0px 8px 8px #43425d40;

@@ -10,7 +10,7 @@
     />
     <link rel="stylesheet" href="css/hamburger.css" />
     <link rel="stylesheet" href="css/checkbox.css" />
-    <link rel="stylesheet" href="css/rangeslider.css">
+    <link rel="stylesheet" href="css/rangeslider.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
@@ -70,11 +70,11 @@
               </li>
               <li>
                 <div class="header__nav--country">
-                  <img src="assets/UAE__flag.svg" alt="Flag" />
+                  <a href="#"><img src="assets/UAE__flag.svg" alt="Flag" /></a>
                 </div>
               </li>
               <li>
-                <div class="header__nav--signin">
+                <div class="header__nav--signin mobile__hidden">
                   <a href="#"
                     ><img src="assets/user__icon.svg" alt="icon" />
                     <p>Sign In</p>
@@ -82,6 +82,12 @@
                 </div>
               </li>
             </ul>
+          </div>
+          <div class="header__nav--signin desktop__hidden">
+            <a href="#"
+              ><img src="assets/user__icon.svg" alt="icon" />
+              <p>Sign In</p>
+            </a>
           </div>
         </div>
       </div>
@@ -186,8 +192,7 @@
     </section>
 
     <div class="filter__floating">
-    <div class="backdrop unactive"></div>
-
+      <div class="backdrop unactive"></div>
       <div class="filterslist unactive">
         <form action="#">
           <select id="make">
@@ -209,19 +214,19 @@
             <option value="Delhi">Delhi</option>
           </select>
           <div class="from__to">
-          <select id="From">
-            <option value="From">From</option>
-            <option value="2000">2000</option>
-            <option value="2001">2001</option>
-            <option value="2002">2002</option>
-          </select>
-          <select id="To">
-            <option value="To">To</option>
-            <option value="2022">2022</option>
-            <option value="2023">2023</option>
-            <option value="2024">2024</option>
-          </select>
-        </div>
+            <select id="From">
+              <option value="From">From</option>
+              <option value="2000">2000</option>
+              <option value="2001">2001</option>
+              <option value="2002">2002</option>
+            </select>
+            <select id="To">
+              <option value="To">To</option>
+              <option value="2022">2022</option>
+              <option value="2023">2023</option>
+              <option value="2024">2024</option>
+            </select>
+          </div>
           <input
             type="text"
             name="auctionid"
@@ -278,19 +283,19 @@
                   <option value="Delhi">Delhi</option>
                 </select>
                 <div class="from__to">
-                <select id="From">
-                  <option value="From">From</option>
-                  <option value="2000">2000</option>
-                  <option value="2001">2001</option>
-                  <option value="2002">2002</option>
-                </select>
-                <select id="To">
-                  <option value="To">To</option>
-                  <option value="2022">2022</option>
-                  <option value="2023">2023</option>
-                  <option value="2024">2024</option>
-                </select>
-              </div>
+                  <select id="From">
+                    <option value="From">From</option>
+                    <option value="2000">2000</option>
+                    <option value="2001">2001</option>
+                    <option value="2002">2002</option>
+                  </select>
+                  <select id="To">
+                    <option value="To">To</option>
+                    <option value="2022">2022</option>
+                    <option value="2023">2023</option>
+                    <option value="2024">2024</option>
+                  </select>
+                </div>
                 <input
                   type="text"
                   name="auctionid"
