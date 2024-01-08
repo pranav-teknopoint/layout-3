@@ -470,6 +470,7 @@ form{
 .main__content {
   /* max-width: 870px; */
   margin-bottom: 44px;
+  flex-wrap: wrap;
 }
 
 .car__card {
