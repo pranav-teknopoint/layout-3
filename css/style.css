@@ -228,7 +228,6 @@ body {
   display: flex;
   justify-content: flex-end;
   gap: 28px;
-  margin-left: 70px;
 }
 
 .grid-sort {
